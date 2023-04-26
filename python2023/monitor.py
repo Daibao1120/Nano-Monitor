@@ -30,8 +30,12 @@ ip_address = socket.gethostbyname(hostname)
 #
 
 while True:
+
+	#現在時間
     	localtime = time.localtime()
     	timeresult = time.strftime("%Y-%m-%d \n %I:%M:%S %p", localtime)
+    	
+    	#oled顯示
     	Draw = ImageDraw.Draw(image)
     	Draw.rectangle((0, 0, width, height), outline = 0, fill = 0)
     	Draw.text((0, 0), timeresult, font=font ,fill=255)
